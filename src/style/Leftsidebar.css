@@ -1,0 +1,80 @@
+.profile{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+
+}
+.profile .profile-img img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #dddd;
+}
+
+.list-group.custom-list .list-group-item:not(:first-child) {
+  display: list-item;      
+  list-style-type: disc;   
+  list-style-position: inside; 
+}
+
+
+.dropdown-links {
+  border: 1px solid #dddd;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.dropdown-header {
+  cursor: pointer;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  margin-right: 8px;
+}
+
+.arrow.down {
+  transform: rotate(90deg); 
+}
+
+.sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 25px; 
+  list-style-type: none; 
+  margin: 0;
+}
+
+.sub-menu.open {
+  max-height: 500px;
+}
+
+.sub-menu li {
+  padding: 5px 0;
+}
+.menu-links .side-menu{
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    border: 1px solid #dddd;
+    border-radius: 5px;
+}
+.menu-links .side-menu p{
+    left: 10px;
+    position: relative;
+}
+.menu-links .side-menu a{
+  text-decoration: none;
+}
+.menu-links .side-menu .left-bar{
+    display: block;
+    height: 16px;
+    width: 4px;
+    background: black;
+    border-radius: 5px;
+    
+}
