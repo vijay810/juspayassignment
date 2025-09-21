@@ -6,6 +6,7 @@
 }
 .card-box:hover {
   background-color: #e3f5ff;
+  color: black;
 }
 .card-box h5 {
   font-size: 25px;

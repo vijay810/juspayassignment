@@ -4,7 +4,7 @@ const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
     return (
         <nav className="navbar navbar-expand-lg px-3 border border-1 d-flex justify-content-between">
             <div className='d-flex gap-2 align-items-center'>
-                <div onClick={toggleLeft}>
+                <div className='pointer' onClick={toggleLeft}>
                     <img src='../assets/images/Sidebar.png' alt='left-sidebar' />
                 </div>
                 <div>
@@ -42,7 +42,7 @@ const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
                     <img src="../assets/images/bell.png" alt="bell" />
                 </div>
 
-                <div onClick={toggleRight}>
+                <div className='pointer' onClick={toggleRight}>
                     <img src='../assets/images/Sidebar.png' alt='right-sidebar' />
                 </div>
             </div>

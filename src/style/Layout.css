@@ -53,7 +53,9 @@
   }
 }
 
-
+.pointer{
+  cursor: pointer;
+}
 
 /* theme color change start*/
 
