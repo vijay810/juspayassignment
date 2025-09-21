@@ -96,4 +96,10 @@
 .dark-theme img {
   filter: brightness(0.8) invert(1);
 }
+.dark-theme .topbar-logo, .profile-img img{
+  filter: brightness(0.5);
+}
+.right-sidebar-logo img, .user-profile img{
+  filter: hue-rotate(45deg);
+}
 /* theme color change end*/

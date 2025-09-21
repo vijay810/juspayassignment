@@ -153,6 +153,9 @@ ul li {
   opacity: 0;
   visibility: hidden;
 }
+.left-inside:focus-within img {
+    display: none;
+}
 
 .search-input:focus {
   width: 100%;
