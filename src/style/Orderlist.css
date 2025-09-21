@@ -1,0 +1,9 @@
+.table-transparent {
+  --bs-table-bg: transparent !important;
+}
+.table-design {
+  display: block;
+  position: relative;
+  overflow-x: scroll;
+  width: 100%;
+}

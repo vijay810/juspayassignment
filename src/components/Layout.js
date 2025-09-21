@@ -8,6 +8,12 @@ const LayoutPage = ({ children }) => {
     const [showLeft, setShowLeft] = useState(true);
     const [showRight, setShowRight] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
+    const [theme, setTheme] = useState('light'); // 👈 Theme state
+
+    const toggleTheme = () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+    };
 
     useEffect(() => {
         const handleResize = () => {
@@ -28,36 +34,30 @@ const LayoutPage = ({ children }) => {
     }, []);
 
     return (
-        <div className="d-flex flex-column vh-100">
+        <div className={`layout-wrapper ${theme}-theme d-flex flex-column vh-100`}>
             <div className="d-flex flex-grow-1">
-                {/* LEFT SIDEBAR */}
                 {(showLeft || isMobile) && (
                     <div className={`sidebar-left border-end p-2 ${showLeft ? 'open' : ''}`}>
                         {isMobile && (
-                            <button className="sidebar-close-btn" onClick={() => setShowLeft(false)}>
-                                ✖
-                            </button>
+                            <button className="sidebar-close-btn" onClick={() => setShowLeft(false)}>✖</button>
                         )}
                         <LeftSidebar />
                     </div>
                 )}
 
-                {/* MAIN CONTENT */}
                 <div className="main-content p-0 flex-grow-1">
                     <Header
                         toggleLeft={() => setShowLeft(!showLeft)}
                         toggleRight={() => setShowRight(!showRight)}
+                        toggleTheme={toggleTheme} // 👈 Pass to Header
                     />
-                    <div className="p-3">{children}</div>
+                    <div>{children}</div>
                 </div>
 
-                {/* RIGHT SIDEBAR */}
                 {(showRight || isMobile) && (
                     <div className={`sidebar-right border-start p-2 ${showRight ? 'open' : ''}`}>
                         {isMobile && (
-                            <button className="sidebar-close-btn" onClick={() => setShowRight(false)}>
-                                ✖
-                            </button>
+                            <button className="sidebar-close-btn" onClick={() => setShowRight(false)}>✖</button>
                         )}
                         <RightSidebar />
                     </div>

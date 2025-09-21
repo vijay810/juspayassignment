@@ -1,0 +1,13 @@
+.right-sidebar .right-sidebar-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+    filter: none;
+    object-fit: cover;
+}
+.right-sidebar .content .down-text {
+  color: #ccc;
+}
+.heading {
+  font-weight: 600;
+}
