@@ -78,7 +78,7 @@ const Dashboard = () => {
                         <div className='row mx-0'>
                             <div className='col-sm-9 p-1'>
                                 <div className='linechart-container d-flex gap-2'>
-                                    <p className='mb-0 p-2 heading'>Revenu</p><span className='p-2'>/</span>
+                                    <p className='mb-0 p-2 heading'>Revenu</p><span className='p-2'></span>
 
                                 </div>
                             </div>
