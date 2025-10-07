@@ -1,3 +1,12 @@
-p, a{
-    font-size: 14px;
+p,
+a,input, .search-input, .table, span{
+  font-size: 12px !important;
+}
+
+@media (max-width: 520px) {
+  p,
+  a, input, .search-input, .table, span {
+    font-size: 10px !important;
+  }
+
 }

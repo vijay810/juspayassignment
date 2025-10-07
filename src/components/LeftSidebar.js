@@ -100,7 +100,8 @@ const LeftSidebar = () => {
                                 className="d-flex dropdown-header"
                                 onClick={() => toggleDropdown(index)}
                             >
-                                <div className={`arrow ${openIndex === index ? 'down' : ''}`}> &#x276F; </div>
+                                <div className={`arrow ${openIndex === index ? 'down' : ''}`} 
+                                style={{fontSize: "smaller"}}> &#x276F; </div>
                                 <img src={item.image} alt={`${item.title}-logo`} />
                                 <span>{item.title}</span>
                             </div>
@@ -134,7 +135,7 @@ const LeftSidebar = () => {
                                 className="d-flex dropdown-header"
                                 onClick={() => Dropdownpages(index)}
                             >
-                                <div className={`arrow ${openPagesIndex === index ? 'down' : ''}`}>&#x276F;</div>
+                                <div className={`arrow ${openPagesIndex === index ? 'down' : ''}`} style={{ fontSize: "smaller" }}>&#x276F;</div>
                                 <img src={item.image} alt={`${item.title}-logo`} />
                                 <span>{item.title}</span>
                             </div>

@@ -22,7 +22,7 @@ const OrderList = () => {
       </div>
     }
     { !loader &&
-      <div className='container-fluid'>
+      <div className='container-fluid px-2'>
         <p className='mb-0 py-3  tab'>Order List</p>
         <div className='p-1 top-bar mb-3'>
           <div className='gap-1 d-flex align-items-center'>
@@ -36,190 +36,193 @@ const OrderList = () => {
           </div>
 
         </div>
-        <table class="table table-transparent">
-          <thead>
-            <tr>
-              <th scope="col"><input type="checkbox" /></th>
-              <th scope="col">Order ID</th>
-              <th scope="col">User</th>
-              <th scope="col">Project</th>
-              <th scope="col">Address</th>
-              <th scope="col">Date</th>
-              <th scope="col" className='text-center'>status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><input type="checkbox" /></th>
-              <td>#CM9801</td>
-              <td>
-                <div className='user-profile'>
-                    <img src="../assets/images/orderlist/users/Person1.png" alt="" />
-                    <p className='mb-0 ps-1'>Natali Craig</p>
-                </div>
-              </td>
-              <td>Landing Page</td>
-              <td>Meadow Lane Oakland</td>
-              <td>
-                <div className='date-table'>
-                    <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
-                    <p className='mb-0 ps-1'>Just Now</p>
-                </div>
-              </td>
-              <td>
-                <ul><li>In Progress</li></ul>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><input type="checkbox" /></th>
-              <td>#CM9801</td>
-              <td>
-                <div className='user-profile'>
-                    <img src="../assets/images/orderlist/users/Person2.png" alt="" />
-                    <p className='mb-0 ps-1'>Natali Craig</p>
-                </div>
-              </td>
-              <td>Landing Page</td>
-              <td>Meadow Lane Oakland</td>
-              <td>
-                <div className='date-table'>
-                    <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
-                    <p className='mb-0 ps-1'>Just Now</p>
-                </div>
-              </td>
-              <td>
-                <ul><li>In Progress</li></ul>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><input type="checkbox" /></th>
-              <td>#CM9801</td>
-              <td>
-                <div className='user-profile'>
-                    <img src="../assets/images/orderlist/users/Person3.png" alt="" />
-                    <p className='mb-0 ps-1'>Natali Craig</p>
-                </div>
-              </td>
-              <td>Landing Page</td>
-              <td>Meadow Lane Oakland</td>
-              <td>
-                <div className='date-table'>
-                    <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
-                    <p className='mb-0 ps-1'>Just Now</p>
-                </div>
-              </td>
-              <td>
-                <ul><li>In Progress</li></ul>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><input type="checkbox" /></th>
-              <td>#CM9801</td>
-              <td>
-                <div className='user-profile'>
-                    <img src="../assets/images/orderlist/users/Person4.png" alt="" />
-                    <p className='mb-0 ps-1'>Natali Craig</p>
-                </div>
-              </td>
-              <td>Landing Page</td>
-              <td>Meadow Lane Oakland</td>
-              <td>
-                <div className='date-table'>
-                    <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
-                    <p className='mb-0 ps-1'>Just Now</p>
-                </div>
-              </td>
-              <td>
-                <ul><li>In Progress</li></ul>
-              </td>
-            </tr>
+        <div className='table-responsive'>
+            <table class="table table-transparent">
+              <thead>
+                <tr>
+                  <th scope="col"><input type="checkbox" /></th>
+                  <th scope="col">Order ID</th>
+                  <th scope="col">User</th>
+                  <th scope="col">Project</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Date</th>
+                  <th scope="col" className='text-center'>status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>#CM9801</td>
+                  <td>
+                    <div className='user-profile'>
+                      <img src="../assets/images/orderlist/users/Person1.png" alt="" />
+                      <p className='mb-0 ps-1'>Natali Craig</p>
+                    </div>
+                  </td>
+                  <td>Landing Page</td>
+                  <td>Meadow Lane Oakland</td>
+                  <td>
+                    <div className='date-table'>
+                      <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
+                      <p className='mb-0 ps-1'>Just Now</p>
+                    </div>
+                  </td>
+                  <td>
+                    <ul><li>In Progress</li></ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>#CM9801</td>
+                  <td>
+                    <div className='user-profile'>
+                      <img src="../assets/images/orderlist/users/Person2.png" alt="" />
+                      <p className='mb-0 ps-1'>Natali Craig</p>
+                    </div>
+                  </td>
+                  <td>Landing Page</td>
+                  <td>Meadow Lane Oakland</td>
+                  <td>
+                    <div className='date-table'>
+                      <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
+                      <p className='mb-0 ps-1'>Just Now</p>
+                    </div>
+                  </td>
+                  <td>
+                    <ul><li>In Progress</li></ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>#CM9801</td>
+                  <td>
+                    <div className='user-profile'>
+                      <img src="../assets/images/orderlist/users/Person3.png" alt="" />
+                      <p className='mb-0 ps-1'>Natali Craig</p>
+                    </div>
+                  </td>
+                  <td>Landing Page</td>
+                  <td>Meadow Lane Oakland</td>
+                  <td>
+                    <div className='date-table'>
+                      <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
+                      <p className='mb-0 ps-1'>Just Now</p>
+                    </div>
+                  </td>
+                  <td>
+                    <ul><li>In Progress</li></ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>#CM9801</td>
+                  <td>
+                    <div className='user-profile'>
+                      <img src="../assets/images/orderlist/users/Person4.png" alt="" />
+                      <p className='mb-0 ps-1'>Natali Craig</p>
+                    </div>
+                  </td>
+                  <td>Landing Page</td>
+                  <td>Meadow Lane Oakland</td>
+                  <td>
+                    <div className='date-table'>
+                      <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
+                      <p className='mb-0 ps-1'>Just Now</p>
+                    </div>
+                  </td>
+                  <td>
+                    <ul><li>In Progress</li></ul>
+                  </td>
+                </tr>
 
-            <tr>
-              <th scope="row"><input type="checkbox" /></th>
-              <td>#CM9801</td>
-              <td>
-                <div className='user-profile'>
-                    <img src="../assets/images/orderlist/users/Person5.png" alt="" />
-                    <p className='mb-0 ps-1'>Natali Craig</p>
-                </div>
-              </td>
-              <td>Landing Page</td>
-              <td>Meadow Lane Oakland</td>
-              <td>
-                <div className='date-table'>
-                    <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
-                    <p className='mb-0 ps-1'>Just Now</p>
-                </div>
-              </td>
-              <td>
-                <ul><li>In Progress</li></ul>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><input type="checkbox" /></th>
-              <td>#CM9801</td>
-              <td>
-                <div className='user-profile'>
-                    <img src="../assets/images/orderlist/users/Person6.png" alt="" />
-                    <p className='mb-0 ps-1'>Natali Craig</p>
-                </div>
-              </td>
-              <td>Landing Page</td>
-              <td>Meadow Lane Oakland</td>
-              <td>
-                <div className='date-table'>
-                    <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
-                    <p className='mb-0 ps-1'>Just Now</p>
-                </div>
-              </td>
-              <td>
-                <ul><li>In Progress</li></ul>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><input type="checkbox" /></th>
-              <td>#CM9801</td>
-              <td>
-                <div className='user-profile'>
-                    <img src="../assets/images/orderlist/users/Person7.png" alt="" />
-                    <p className='mb-0 ps-1'>Natali Craig</p>
-                </div>
-              </td>
-              <td>Landing Page</td>
-              <td>Meadow Lane Oakland</td>
-              <td>
-                <div className='date-table'>
-                    <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
-                    <p className='mb-0 ps-1'>Just Now</p>
-                </div>
-              </td>
-              <td>
-                <ul><li>In Progress</li></ul>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><input type="checkbox" /></th>
-              <td>#CM9801</td>
-              <td>
-                <div className='user-profile'>
-                    <img src="../assets/images/orderlist/users/Person8.png" alt="" />
-                    <p className='mb-0 ps-1'>Natali Craig</p>
-                </div>
-              </td>
-              <td>Landing Page</td>
-              <td>Meadow Lane Oakland</td>
-              <td>
-                <div className='date-table'>
-                    <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
-                    <p className='mb-0 ps-1'>Just Now</p>
-                </div>
-              </td>
-              <td>
-                <ul><li>In Progress</li></ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>#CM9801</td>
+                  <td>
+                    <div className='user-profile'>
+                      <img src="../assets/images/orderlist/users/Person5.png" alt="" />
+                      <p className='mb-0 ps-1'>Natali Craig</p>
+                    </div>
+                  </td>
+                  <td>Landing Page</td>
+                  <td>Meadow Lane Oakland</td>
+                  <td>
+                    <div className='date-table'>
+                      <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
+                      <p className='mb-0 ps-1'>Just Now</p>
+                    </div>
+                  </td>
+                  <td>
+                    <ul><li>In Progress</li></ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>#CM9801</td>
+                  <td>
+                    <div className='user-profile'>
+                      <img src="../assets/images/orderlist/users/Person6.png" alt="" />
+                      <p className='mb-0 ps-1'>Natali Craig</p>
+                    </div>
+                  </td>
+                  <td>Landing Page</td>
+                  <td>Meadow Lane Oakland</td>
+                  <td>
+                    <div className='date-table'>
+                      <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
+                      <p className='mb-0 ps-1'>Just Now</p>
+                    </div>
+                  </td>
+                  <td>
+                    <ul><li>In Progress</li></ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>#CM9801</td>
+                  <td>
+                    <div className='user-profile'>
+                      <img src="../assets/images/orderlist/users/Person7.png" alt="" />
+                      <p className='mb-0 ps-1'>Natali Craig</p>
+                    </div>
+                  </td>
+                  <td>Landing Page</td>
+                  <td>Meadow Lane Oakland</td>
+                  <td>
+                    <div className='date-table'>
+                      <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
+                      <p className='mb-0 ps-1'>Just Now</p>
+                    </div>
+                  </td>
+                  <td>
+                    <ul><li>In Progress</li></ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>#CM9801</td>
+                  <td>
+                    <div className='user-profile'>
+                      <img src="../assets/images/orderlist/users/Person8.png" alt="" />
+                      <p className='mb-0 ps-1'>Natali Craig</p>
+                    </div>
+                  </td>
+                  <td>Landing Page</td>
+                  <td>Meadow Lane Oakland</td>
+                  <td>
+                    <div className='date-table'>
+                      <img src="../assets/images/orderlist/date.png" alt="dateIcon" />
+                      <p className='mb-0 ps-1'>Just Now</p>
+                    </div>
+                  </td>
+                  <td>
+                    <ul><li>In Progress</li></ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+       
       </div>}
     </>
   )

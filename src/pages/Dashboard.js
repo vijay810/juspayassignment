@@ -23,7 +23,7 @@ const Dashboard = () => {
                 </div>
             </div>}
             {!loader &&
-                <div className='container-fluid'>
+                <div className='container-fluid px-2'>
                     <div>
                         <p className='mb-0 py-2 tab'>eCommerce</p>
                         <div className='row mx-0 mb-3'>

@@ -7,53 +7,76 @@
   overflow-x: scroll;
   width: 100%;
 }
-.top-bar{
-    display: flex;
-    background: #dddd;
-    justify-content: space-between;
-    border-radius: 5px;
+.top-bar {
+  display: flex;
+  background: #dddd;
+  justify-content: space-between;
+  border-radius: 5px;
 }
-
 
 .search {
   position: relative;
-  width: 200px;  /* input width */
+  width: 200px; /* input width */
 }
 
 .search input {
-    width: 100%;
-    padding: 3px 8px 3px 30px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+  width: 100%;
+  padding: 3px 8px 3px 30px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 .search input:focus {
-    width: 100%;
-    padding: 3px 8px 3px 5px;
+  width: 100%;
+  padding: 3px 8px 3px 5px;
 }
 .search:focus-within img {
-    display: none;
+  display: none;
 }
-img{
-    filter: brightness(0.5);
+img {
+  filter: brightness(0.5);
 }
 .search img {
   position: absolute;
   left: 8px;
   top: 50%;
   transform: translateY(-50%);
-  width: 16px;  
+  width: 16px;
   height: 16px;
-  pointer-events: none; 
+  pointer-events: none;
 }
-.user-profile, .date-table {
-    display: flex;
-    align-items: center;
+.user-profile,
+.date-table {
+  display: flex;
+  align-items: center;
 }
-.user-profile img{
-    width: 24px;
-    height: 24px;
+.user-profile img {
+  width: 24px;
+  height: 24px;
 }
-.date-table img{
-    width: 16px;
-    height: 16px;
+.date-table img {
+  width: 16px;
+  height: 16px;
+}
+.table-responsive {
+     width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    position: relative;
+}
+
+
+@media (max-width: 520px) {
+  .table-responsive {
+     width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    position: absolute;
+}
+
+  .search {
+    position: relative;
+    width: 150px;
+  }
 }
