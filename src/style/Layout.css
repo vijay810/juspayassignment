@@ -83,7 +83,10 @@
 .dark-theme .navbar,
 .dark-theme .sidebar-left,
 .dark-theme .sidebar-right,
-.dark-theme .main-content {
+.dark-theme .main-content,
+.dark-theme .form-label,
+.dark-theme input,
+.dark-theme input:focus {
   background-color: #2c2c2c;
   color: white;
 }
@@ -91,15 +94,20 @@
 .light-theme .navbar,
 .light-theme .sidebar-left,
 .light-theme .sidebar-right,
-.light-theme .main-content {
+.light-theme .main-content, 
+.light-theme .form-label,
+.light-theme input,
+.light-theme input:focus {
   background-color: #f8f9fa;
   color: black;
 }
 .dark-theme img {
-  filter: brightness(0.8) invert(1);
+  /* filter: brightness(0.8) invert(1); */
+  filter: brightness(1) invert(0.7);
 }
+
 .dark-theme .topbar-logo, .profile-img img{
-  filter: brightness(0.5);
+  filter: none;
 }
 .right-sidebar-logo img, .user-profile img{
   filter: hue-rotate(45deg);

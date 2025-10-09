@@ -61,7 +61,7 @@ const Dashboard = () => {
                                             <p className='mb-2 card-label'>Growth</p>
                                             <div className='d-flex justify-content-between'>
                                                 <h5>30.1%</h5>
-                                                <div className='d-flex align-items-center gap-1'><p className='mb-0'>+6.08</p> <img src="../assets/images/highIcon.png" alt="" /></div>
+                                                <div className='d-flex align-items-center gap-1'><p className='mb-0'>+6.08</p> <img className='ratio' src="../assets/images/highIcon.png" alt="" /></div>
                                             </div>
                                         </div>
                                     </div>

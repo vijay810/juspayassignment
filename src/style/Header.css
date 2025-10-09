@@ -1,0 +1,84 @@
+.gap {
+  gap: 5px;
+}
+.navbar {
+  display: block !important;
+}
+.custom-search {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 150px;
+  transition: width 0.3s ease;
+}
+
+.search-input {
+  width: 100%;
+  padding: 2px 28px 2px 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: width 0.3s ease;
+}
+
+.left-inside,
+.right-inside {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-45%);
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.left-inside {
+  left: 6px;
+  top: 13px;
+  filter: brightness(0.5);
+}
+
+.right-inside {
+  right: 6px;
+  top: 13px;
+  filter: brightness(0.5);
+}
+
+.left-inside img,
+.right-inside img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0.5);
+}
+
+.search-input:focus + .right-inside,
+.search-input:focus + .left-inside {
+  opacity: 0;
+  visibility: hidden;
+}
+.left-inside:focus-within img {
+  display: none;
+}
+
+.search-input:focus {
+  width: 100%;
+  padding: 2px 5px 2px 5px !important;
+}
+
+.notification img {
+  width: 20px;
+  height: 20px;
+}
+
+.notification .bell {
+  width: 25px !important;
+  height: 25px !important;
+}
+@media (max-width: 585px) {
+    .gap {
+  gap: 2px;
+}
+}

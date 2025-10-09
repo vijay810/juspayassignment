@@ -16,7 +16,7 @@ const RightSidebar = () => {
                 </div>
                 <div className='d-flex right-sidebar mb-1'>
                     <div className='right-sidebar-logo'>
-                        <img src="../assets/images/rightsidebar/Icontwo.png" alt="" />
+                        <img src="../assets/images/rightsidebar/IconTwo.png" alt="" />
                     </div>
                     <div className='content ps-1'>
                         <p className='mb-0'>New user registered</p>

@@ -1,11 +1,11 @@
 p,
-a,input, .search-input, .table, span{
+a,input, .search-input, .table, span, label, input, select, button{
   font-size: 12px !important;
 }
 
 @media (max-width: 520px) {
   p,
-  a, input, .search-input, .table, span {
+  a, input, .search-input, .table, span, label,input, select, button {
     font-size: 10px !important;
   }
 

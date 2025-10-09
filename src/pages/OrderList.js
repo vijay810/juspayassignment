@@ -22,6 +22,7 @@ const OrderList = () => {
       </div>
     }
     { !loader &&
+      <>
       <div className='container-fluid px-2'>
         <p className='mb-0 py-3  tab'>Order List</p>
         <div className='p-1 top-bar mb-3'>
@@ -68,7 +69,9 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td>
-                    <ul><li>In Progress</li></ul>
+                    <div className='d-flex justify-content-center'>
+                    <ul className='px-0' style={{ marginBottom: '0px', display: 'contents' }}><li>In Progress</li></ul>
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -89,7 +92,9 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td>
-                    <ul><li>In Progress</li></ul>
+                    <div className='d-flex justify-content-center'>
+                    <ul className='px-0' style={{ marginBottom: '0px', display: 'contents' }}><li>In Progress</li></ul>
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -110,7 +115,9 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td>
-                    <ul><li>In Progress</li></ul>
+                    <div className='d-flex justify-content-center'>
+                    <ul className='px-0' style={{ marginBottom: '0px', display: 'contents' }}><li>In Progress</li></ul>
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -131,7 +138,9 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td>
-                    <ul><li>In Progress</li></ul>
+                    <div className='d-flex justify-content-center'>
+                    <ul className='px-0' style={{ marginBottom: '0px', display: 'contents' }}><li>In Progress</li></ul>
+                    </div>
                   </td>
                 </tr>
 
@@ -153,7 +162,9 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td>
-                    <ul><li>In Progress</li></ul>
+                    <div className='d-flex justify-content-center'>
+                    <ul className='px-0' style={{ marginBottom: '0px', display: 'contents' }}><li>In Progress</li></ul>
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -174,7 +185,9 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td>
-                    <ul><li>In Progress</li></ul>
+                    <div className='d-flex justify-content-center'>
+                    <ul className='px-0' style={{ marginBottom: '0px', display: 'contents' }}><li>In Progress</li></ul>
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -195,7 +208,9 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td>
-                    <ul><li>In Progress</li></ul>
+                    <div className='d-flex justify-content-center'>
+                    <ul className='px-0' style={{ marginBottom: '0px', display: 'contents'}}><li>In Progress</li></ul>
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -216,14 +231,18 @@ const OrderList = () => {
                     </div>
                   </td>
                   <td>
-                    <ul><li>In Progress</li></ul>
+                    <div className='d-flex justify-content-center'>
+                    <ul className='px-0' style={{ marginBottom: '0px', display: 'contents' }}><li>In Progress</li></ul>
+                    </div>
                   </td>
                 </tr>
               </tbody>
             </table>
         </div>
        
-      </div>}
+      </div>
+      </>
+      }
     </>
   )
 }

@@ -73,7 +73,7 @@ img {
     -webkit-overflow-scrolling: touch;
     display: block;
     position: absolute;
-}
+  }
 
   .search {
     position: relative;
