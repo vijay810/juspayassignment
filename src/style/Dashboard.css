@@ -96,7 +96,7 @@
 }
 @media (max-width: 560px) {
   .card-box {
-    height: 100px;
+    height: 90px;
   }
   .barchart-container {
     display: inline-block !important;
