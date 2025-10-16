@@ -3,7 +3,7 @@ import Header from './Header';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
 import '../style/Layout.css';
-
+import { RxCross1 } from "react-icons/rx";
 const LayoutPage = ({ children }) => {
     const [showLeft, setShowLeft] = useState(true);
     const [showRight, setShowRight] = useState(true);
@@ -39,7 +39,8 @@ const LayoutPage = ({ children }) => {
                 {(showLeft || isMobile) && (
                     <div className={`sidebar-left border-end p-2 ${showLeft ? 'open' : ''}`}>
                         {isMobile && (
-                            <button className="sidebar-close-btn" onClick={() => setShowLeft(false)}>✖</button>
+                            <p className="sidebar-close-btn pe-2" onClick={() => setShowLeft(false)}>< RxCross1 size={15} /></p>
+                            
                         )}
                         <LeftSidebar />
                     </div>
@@ -57,7 +58,7 @@ const LayoutPage = ({ children }) => {
                 {(showRight || isMobile) && (
                     <div className={`sidebar-right border-start p-2 ${showRight ? 'open' : ''}`}>
                         {isMobile && (
-                            <button className="sidebar-close-btn" onClick={() => setShowRight(false)}>✖</button>
+                            <p className="sidebar-close-btn" onClick={() => setShowRight(false)}>< RxCross1 size={15} /></p>
                         )}
                         <RightSidebar />
                     </div>
