@@ -26,6 +26,7 @@
   background: transparent;
   display: block;
   position: relative;
+      width: 100%;
 }
 .barchart-container .heading {
   font-weight: 600;
