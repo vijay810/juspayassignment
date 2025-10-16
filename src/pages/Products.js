@@ -1,69 +1,68 @@
-import React, { useEffect, useState } from 'react'
-import '../style/Products.css'
+import React, { useState } from 'react'
+
 const Products = () => {
-    const [form, setMyform] = useState({
+    const [form, setMyForm] = useState({
         pname: '',
-        description: '',
+        date: '',
+        desc: '',
         status: '1'
     })
-    const [loading, setLoading] = useState(true)
-    const [statusflag, setStatusflag] = useState(false)
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setMyform((prev) => ({
+        setMyForm((prev) => ({
             ...prev,
             [name]: value
         }))
     }
-    const handlesubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault()
         console.log(form)
-    }
-    const loadingFn = () => {
-        setLoading(true);
         setTimeout(() => {
-            setLoading(false)
+            setMyForm({
+                pname: '',
+                date: '',
+                desc: '',
+                status: ''
+            })
         }, 1000)
     }
-    const addBtn = () => {
-        setStatusflag(false)
-    }
-    useEffect(() => {
-        loadingFn()
-    }, [])
-
     return (
         <>
-            {loading && (<div className='d-flex justify-content-center align-items-center vh-100'>
-                <p>Loading....</p>
-            </div>)}
-            {!loading && (<div className='card m-3 border border-1'>
-                <div className='card-header border-bottom border-1 text-end py-1 px-2'>
-                    <button className='btn btn-info' type='button' onClick={addBtn}>ADD</button>
+            <div className='container-fluid'>
+                <div className='card mt-2'>
+                    <div className='card-header text-end'>
+                        <button type='button' className='btn btn-info'>Add</button>
+                    </div>
+                    <div className='card-body'>
+                        <form>
+                            <div className='row'>
+                                <div className='col-sm-2'>
+                                    <label className='form-label'>Enter Name</label>
+                                    <input className='form-control' type="text" placeholder='Enter Name' name='pname' value={form.pname} onChange={handleInputChange} />
+                                </div>
+                                <div className='col-sm-2'>
+                                    <label className='form-label'>date</label>
+                                    <input className='form-control' type="date" placeholder='Enter date' name='date' value={form.date} onChange={handleInputChange} />
+                                </div>
+                                <div className='col-sm-2'>
+                                    <label className='form-label'>Description</label>
+                                    <input className='form-control' type="text" placeholder='Enter description' name='desc' value={form.desc} onChange={handleInputChange} />
+                                </div>
+                                <div className='col-sm-2'>
+                                    <label className='form-label'>Status</label>
+                                    <select className='form-select' name='status' value={form.status} onChange={handleInputChange}>
+                                        <option value="1">Active</option>
+                                        <option value="0">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className='text-end mt-2'>
+                                <button type='submit' className='btn btn-primary' onClick={handleSubmit}>Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <form>
-                    <div className='row mx-0'>
-                        <div className='col-sm-2'>
-                            <label className='form-label mb-1'>Enter Product Name</label>
-                            <input className='form-control' type="text" name="pname" value={form.pname} onChange={handleInputChange} />
-                        </div>
-                        <div className='col-sm-2'>
-                            <label className='form-label mb-1'>Description</label>
-                            <input className='form-control' type="text" name="description" value={form.description} onChange={handleInputChange} />
-                        </div>
-                        {statusflag && (<div className='col-sm-2'>
-                            <label className='form-label mb-1'>Status</label>
-                            <select className='form-select' type="select" name="status" value={form.status} onChange={handleInputChange}>
-                                <option value="1">Active</option>
-                                <option value="0">Inactive</option>
-                            </select>
-                        </div>)}
-                    </div>
-                    <div className='text-end p-2'>
-                        <button className='btn btn-primary' type='submit' onClick={handlesubmit}>Submit</button>
-                    </div>
-                </form >
-            </div>)}
+            </div>
         </>
     )
 }

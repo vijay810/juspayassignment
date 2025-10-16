@@ -1,8 +1,159 @@
 import React, { useState, useEffect } from 'react'
 import '../style/Dashboard.css'
 
+
+import { Bar, Doughnut, Line } from 'react-chartjs-2';
+
+
+import {
+    Chart as ChartJS,
+    BarElement,
+    LineElement,
+    PointElement,
+    CategoryScale,
+    LinearScale,
+    ArcElement,
+    Tooltip,
+    Legend
+} from 'chart.js';
+
+ChartJS.register(
+    BarElement,
+    LineElement,
+    PointElement,
+    CategoryScale,
+    LinearScale,
+    ArcElement,
+    Tooltip,
+    Legend
+);
+
+// Common data labels
+const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+
+const StackedBarChart = () => {
+    const data = {
+        labels,
+        datasets: [
+            {
+                label: 'Dataset 1',
+                data: [50, 20, 15, 25, 30, 19],
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            },
+            {
+                label: 'Dataset 2',
+                data: [15, 10, 20, 12, 18, 10],
+                backgroundColor: 'rgba(53, 162, 235, 0.5)',
+            },
+        ],
+    };
+
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Stacked Bar Chart Example',
+            },
+        },
+        scales: {
+            x: {
+                stacked: true,
+            },
+            y: {
+                stacked: true,
+            },
+        },
+    };
+
+    return <Bar data={data} options={options} />;
+};
+
+
+// Data for Pie chart
+const pieData = {
+    labels,
+    datasets: [
+        {
+            label: 'Votes',
+            data: [12, 19, 25, 10, 50, 30],
+            backgroundColor: [
+                'red',
+                'yellow',
+                'orange',
+                'purple',
+                'green',
+                'brown'
+            ],
+            borderWidth: 1,
+            borderColor: '#fff'
+        }
+    ]
+};
+
+const pieOptions = {
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'right'
+        },
+        tooltip: {
+            enabled: true
+        }
+    }
+};
+
+
+const barLineData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    datasets: [
+        {
+            label: 'Revenue',
+            data: [3000, 4500, 3200, 5000, 4000, 6000],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.4,
+            pointBackgroundColor: 'white',
+            pointBorderColor: 'rgb(75, 192, 192)',
+            pointHoverRadius: 6,
+        },
+        {
+            label: 'Expenses',
+            data: [2000, 3000, 2500, 4000, 2800, 4500],
+            fill: false,
+            borderColor: 'rgb(255, 99, 132)',
+            tension: 0.4,
+            pointBackgroundColor: 'white',
+            pointBorderColor: 'rgb(255, 99, 132)',
+            pointHoverRadius: 6,
+        }
+    ]
+};
+
+// Line Chart Options
+const barLineOptions = {
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        title: {
+            display: true,
+            text: 'Monthly Revenue vs Expenses',
+        },
+    },
+    scales: {
+        y: {
+            beginAtZero: true,
+        },
+    },
+};
+
 const Dashboard = () => {
-    const [loader, setLoader] = useState('true')
+    const [loader, setLoader] = useState(true);
 
     const lodingFn = () => {
         setLoader(true);
@@ -10,6 +161,7 @@ const Dashboard = () => {
             setLoader(false);
         }, 1000)
     }
+
     useEffect(() => {
         lodingFn()
     }, [])
@@ -30,46 +182,60 @@ const Dashboard = () => {
                             <div className='col-sm-6 px-0'>
                                 <div className='row mx-0'>
                                     <div className='col-sm-6 p-1'>
-                                        <div className='border card-box border-1 rounded-4 p-3'>
-                                            <p className='mb-2 card-label'>Customers</p>
-                                            <div className='d-flex justify-content-between '>
-                                                <h5>3,781</h5>
-                                                <div className='d-flex align-items-center gap-1'><p className='mb-0'>+11.78</p> <img src="../assets/images/highIcon.png" alt="" /></div>
+                                        <div className='d-grid align-items-center border card-box border-1 rounded-4'>
+                                            <div className='p-3'>
+                                                <p className='mb-2 card-label'>Customers</p>
+                                                <div className='d-flex justify-content-between '>
+                                                    <h5>3,781</h5>
+                                                    <div className='d-flex align-items-center gap-1'><p className='mb-0'>+11.78</p> <img src="../assets/images/highIcon.png" alt="" /></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='col-sm-6 p-1'>
-                                        <div className='card-box border border-1 rounded-4 p-3'>
-                                            <p className='mb-2 card-label'>Orders</p>
-                                            <div className='d-flex justify-content-between'>
-                                                <h5>1,219</h5>
-                                                <div className='d-flex align-items-center gap-1'><p className='mb-0'>-0.03</p> <img src="../assets/images/lowIcon.png" alt="" /></div>
+                                        <div className='d-grid align-items-center border card-box border-1 rounded-4'>
+
+                                            <div className='p-3'>
+                                                <p className='mb-2 card-label'>Orders</p>
+                                                <div className='d-flex justify-content-between'>
+                                                    <h5>1,219</h5>
+                                                    <div className='d-flex align-items-center gap-1'><p className='mb-0'>-0.03</p> <img src="../assets/images/lowIcon.png" alt="" /></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='col-sm-6 p-1'>
-                                        <div className='card-box border border-1 rounded-4 p-3'>
-                                            <p className='mb-2 card-label'>Revenue</p>
-                                            <div className='d-flex justify-content-between'>
-                                                <h5>$695</h5>
-                                                <div className='d-flex align-items-center gap-1'><p className='mb-0'>+15.03</p> <img src="../assets/images/highIcon.png" alt="" /></div>
+                                        <div className='d-grid align-items-center border card-box border-1 rounded-4'>
+
+                                            <div className='p-3'>
+                                                <p className='mb-2 card-label'>Revenue</p>
+                                                <div className='d-flex justify-content-between'>
+                                                    <h5>$695</h5>
+                                                    <div className='d-flex align-items-center gap-1'><p className='mb-0'>+15.03</p> <img src="../assets/images/highIcon.png" alt="" /></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='col-sm-6 p-1'>
-                                        <div className='card-box border border-1 rounded-4 p-3'>
-                                            <p className='mb-2 card-label'>Growth</p>
-                                            <div className='d-flex justify-content-between'>
-                                                <h5>30.1%</h5>
-                                                <div className='d-flex align-items-center gap-1'><p className='mb-0'>+6.08</p> <img className='ratio' src="../assets/images/highIcon.png" alt="" /></div>
+                                        <div className='d-grid align-items-center border card-box border-1 rounded-4'>
+
+                                            <div className='p-3'>
+                                                <p className='mb-2 card-label'>Growth</p>
+                                                <div className='d-flex justify-content-between'>
+                                                    <h5>30.1%</h5>
+                                                    <div className='d-flex align-items-center gap-1'><p className='mb-0'>+6.08</p> <img className='ratio' src="../assets/images/highIcon.png" alt="" /></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='col-sm-6 p-1'>
+                            <div className='col-sm-6 p-1 col-12'>
                                 <div className='barchart-container h-100'>
-                                    <p className='mb-0 p-2 heading'>Projections vs Actuals</p>
+                                    <p className='mb-0 px-2 pt-2 pb-0 heading'>Projections vs Actuals</p>
+                                    {/* <Bar data={data} options={options} /> */}
+                                    {/* <Bar data={barLineData} options={barLineOptions} /> */}
+                                    <StackedBarChart />
                                 </div>
                             </div>
                         </div>
@@ -77,9 +243,9 @@ const Dashboard = () => {
                     <div>
                         <div className='row mx-0'>
                             <div className='col-sm-9 p-1'>
-                                <div className='linechart-container d-flex gap-2'>
-                                    <p className='mb-0 p-2 heading'>Revenu</p><span className='p-2'></span>
-
+                                <div className='linechart-container p-2'>
+                                    <p className='mb-0 p-2 heading'>Revenu</p>
+                                    <Line data={barLineData} options={barLineOptions} />
                                 </div>
                             </div>
                             <div className='col-sm-3 p-1'>
@@ -181,9 +347,10 @@ const Dashboard = () => {
 
                                 </div>
                             </div>
-                            <div className='col-sm-3 p-1'>
+                            <div className='col-sm-3 p-1 col-12'>
                                 <div className='pai-container '>
                                     <p className='mb-0 p-2 heading'>Total Sales</p>
+                                    <Doughnut data={pieData} options={pieOptions} />
                                 </div>
                             </div>
                         </div>

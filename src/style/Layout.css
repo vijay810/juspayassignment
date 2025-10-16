@@ -86,7 +86,8 @@
 .dark-theme .main-content,
 .dark-theme .form-label,
 .dark-theme input,
-.dark-theme input:focus {
+.dark-theme input:focus,
+.dark-theme select {
   background-color: #2c2c2c;
   color: white;
 }
@@ -97,7 +98,8 @@
 .light-theme .main-content, 
 .light-theme .form-label,
 .light-theme input,
-.light-theme input:focus {
+.light-theme input:focus,
+.light-theme select {
   background-color: #f8f9fa;
   color: black;
 }

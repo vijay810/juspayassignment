@@ -1,5 +1,5 @@
 .card-box {
-  height: 100px;
+  height: 130px;
   display: block;
   position: relative;
   border-radius: 15px;
@@ -24,16 +24,21 @@
   border: 1px solid #dddd;
   border-radius: 15px;
   background: transparent;
+  display: block;
+  position: relative;
 }
 .barchart-container .heading {
   font-weight: 600;
 }
-.linechart-container,
 .map-container {
-  height: 300px;
+  display: inline-block;
+  height: 100%;
   border: 1px solid #dddd;
   background: transparent;
   border-radius: 15px;
+  position: relative;
+  width: 100%;
+
 }
 .map-container .map {
   display: flex;
@@ -72,4 +77,28 @@
 }
 .product-name {
   font-weight: normal;
+}
+
+.barchart-container canvas{
+  display: block;
+}
+.linechart-container canvas{
+    width: 100% !important;
+  }
+  .linechart-container{
+        display: table;
+    height: auto;
+    border: 1px solid #dddd;
+    background: transparent;
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+  }
+@media (max-width: 560px) {
+  .barchart-container{
+    display: inline-block !important;
+  }
+  .barchart-container canvas, .linechart-container canvas, .pai-container canvas{
+    width: 100% !important;
+  }
 }
