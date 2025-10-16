@@ -26,7 +26,7 @@
   background: transparent;
   display: block;
   position: relative;
-      width: 100%;
+  width: 100%;
 }
 .barchart-container .heading {
   font-weight: 600;
@@ -39,7 +39,6 @@
   border-radius: 15px;
   position: relative;
   width: 100%;
-
 }
 .map-container .map {
   display: flex;
@@ -80,26 +79,31 @@
   font-weight: normal;
 }
 
-.barchart-container canvas{
+.barchart-container canvas {
   display: block;
 }
-.linechart-container canvas{
-    width: 100% !important;
-  }
-  .linechart-container{
-        display: table;
-    height: auto;
-    border: 1px solid #dddd;
-    background: transparent;
-    border-radius: 15px;
-    position: relative;
-    width: 100%;
-  }
+.linechart-container canvas {
+  width: 100% !important;
+}
+.linechart-container {
+  display: table;
+  height: auto;
+  border: 1px solid #dddd;
+  background: transparent;
+  border-radius: 15px;
+  position: relative;
+  width: 100%;
+}
 @media (max-width: 560px) {
-  .barchart-container{
+  .card-box {
+    height: 100px;
+  }
+  .barchart-container {
     display: inline-block !important;
   }
-  .barchart-container canvas, .linechart-container canvas, .pai-container canvas{
+  .barchart-container canvas,
+  .linechart-container canvas,
+  .pai-container canvas {
     width: 100% !important;
   }
 }
