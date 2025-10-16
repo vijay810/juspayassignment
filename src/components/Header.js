@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 import '../style/Header.css';
+import { PiSidebarDuotone } from "react-icons/pi";
+import { FaRegStar } from "react-icons/fa";
+import { BsBrightnessHigh } from "react-icons/bs";
+import { GoBell } from "react-icons/go";
+import { RxCountdownTimer } from "react-icons/rx";
 
 const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
     const location = useLocation();
@@ -15,14 +20,13 @@ const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
         .replace(/\b\w/g, (char) => char.toUpperCase());
 
     return (
-        <nav className="navbar navbar-expand-lg px-3 border border-1">
+        <nav className="navbar navbar-expand-lg px-2 border border-1">
             <div className='d-flex justify-content-between w-100'>
                 <div className='d-flex gap align-items-center'>
-                    <div className='pointer' onClick={toggleLeft}>
-                        <img src='../assets/images/Sidebar.png' alt='left-sidebar' />
-                    </div>
-                    <div>
-                        <img src='../assets/images/star.png' alt='star' />
+                    <div className='pointer d-flex gap align-items-center' onClick={toggleLeft}>
+                        {/* <img src='../assets/images/Sidebar.png' alt='left-sidebar' /> */}
+                        <PiSidebarDuotone size={18} />
+                        <FaRegStar size={18} />
                     </div>
 
                     {/* Breadcrumb */}
@@ -53,20 +57,17 @@ const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
                         </div>
                     </div>
 
-                    <div className='notification pointer' onClick={toggleTheme}>
-                        <img src="../assets/images/brightness.png" alt="toggle theme" />
+                    <div className='notification pointer d-flex gap align-items-center' onClick={toggleTheme}>
+                        {/* <img src="../assets/images/brightness.png" alt="toggle theme" /> */}
+                        <BsBrightnessHigh size={18} />
+                        <RxCountdownTimer size={18} />
+                        < GoBell size={18} />
                     </div>
 
-                    <div className='notification'>
-                        <img src="../assets/images/timer.png" alt="timer" />
-                    </div>
+                    <div className='pointer d-flex gap align-items-center' onClick={toggleRight}>
+                        {/* <img src='../assets/images/Sidebar.png' alt='right-sidebar' /> */}
+                        <PiSidebarDuotone size={18} style={{ transform: 'scaleX(-1)' }} />
 
-                    <div className='bell'>
-                        <img src="../assets/images/bell.png" alt="bell" />
-                    </div>
-
-                    <div className='pointer' onClick={toggleRight}>
-                        <img src='../assets/images/Sidebar.png' alt='right-sidebar' />
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 .gap {
-  gap: 5px;
+  gap: 7px;
 }
 .navbar {
   display: block !important;
@@ -78,7 +78,7 @@
   height: 25px !important;
 }
 @media (max-width: 585px) {
-    .gap {
-  gap: 2px;
-}
+  .gap {
+    gap: 5px;
+  }
 }
