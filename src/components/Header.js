@@ -57,12 +57,13 @@ const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
                         </div>
                     </div>
 
-                    <div className='notification pointer d-flex gap align-items-center' onClick={toggleTheme}>
+                    <div className='notification d-flex gap align-items-center' >
                         {/* <img src="../assets/images/brightness.png" alt="toggle theme" /> */}
-                        <BsBrightnessHigh size={18} />
+                        < span className='pointer' onClick={toggleTheme}>  <BsBrightnessHigh size={18} /></span>
                         <RxCountdownTimer size={18} />
                         < GoBell size={18} />
                     </div>
+                    
 
                     <div className='pointer d-flex gap align-items-center' onClick={toggleRight}>
                         {/* <img src='../assets/images/Sidebar.png' alt='right-sidebar' /> */}
