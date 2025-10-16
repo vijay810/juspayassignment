@@ -58,7 +58,7 @@ const LayoutPage = ({ children }) => {
                 {(showRight || isMobile) && (
                     <div className={`sidebar-right border-start p-2 ${showRight ? 'open' : ''}`}>
                         {isMobile && (
-                            <p className="sidebar-close-btn" onClick={() => setShowRight(false)}>< RxCross1 size={15} /></p>
+                            <p className="sidebar-close-btn pe-2" onClick={() => setShowRight(false)}>< RxCross1 size={15} /></p>
                         )}
                         <RightSidebar />
                     </div>
