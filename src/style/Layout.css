@@ -70,7 +70,7 @@
 }
 .layout-wrapper.dark-theme tr td, 
 .layout-wrapper.dark-theme tr th,
-.layout-wrapper.dark-theme  a{
+.layout-wrapper.dark-theme a{
   color: #ffffff;
 } 
 
@@ -87,7 +87,8 @@
 .dark-theme .form-label,
 .dark-theme input,
 .dark-theme input:focus,
-.dark-theme select {
+.dark-theme select,
+.dark-theme .p-heading {
   background-color: #2c2c2c;
   color: white;
 }
@@ -99,7 +100,8 @@
 .light-theme .form-label,
 .light-theme input,
 .light-theme input:focus,
-.light-theme select {
+.light-theme select,
+.light-theme .p-heading{
   background-color: #f8f9fa;
   color: black;
 }

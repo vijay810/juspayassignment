@@ -348,7 +348,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             <div className='col-sm-3 p-1 col-12'>
-                                <div className='pai-container '>
+                                <div className='pai-container h-100'>
                                     <p className='mb-0 p-2 heading'>Total Sales</p>
                                     <Doughnut data={pieData} options={pieOptions} />
                                 </div>

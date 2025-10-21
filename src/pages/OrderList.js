@@ -39,7 +39,7 @@ const OrderList = () => {
               </div>
             </div>
             <div className='table-responsive'>
-              <table class="table table-transparent">
+              <table className="table table-transparent">
                 <thead>
                   <tr>
                     <th scope="col"><input type="checkbox" /></th>
