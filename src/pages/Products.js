@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-
+import { useNavigate} from 'react-router-dom'
 const Products = () => {
     const [myform, setMyform] = useState({
         pname: '',
         desc: '',
+        sdate:'',
+        edate:'',
         status: '1'
     })
     const [loading, setLoading] = useState(true)
@@ -29,7 +31,11 @@ const Products = () => {
     useEffect(() => {
         loaderBtn()
     },[])
+    const navigate = useNavigate()
 
+    const redirectbtn = () =>{
+        navigate('/')
+    }
     return (
         <>
             <div className=''>
@@ -48,6 +54,14 @@ const Products = () => {
                                         <label className='form-label'>Enter name</label>
                                         <input type="text" className='form-control' name='pname' value={myform.pname} onChange={handleInputChange} />
                                     </div>
+                                    <div> 
+                                        <label className='form-label'>Start Date</label>
+                                        <input type="date" className='form-control' name="sdate" value={myform.sdate} onChange={handleInputChange} />
+                                    </div>
+                                    <div>
+                                        <label className='form-label'>End Date</label>
+                                        <input type="date" className='form-control' name="edate" value={myform.edate} onChange={handleInputChange} />
+                                    </div>
                                     <div className='col-sm-3'>
                                         <label className='form-label'>Description</label>
                                         <input type="text" className='form-control' name='desc' value={myform.desc} onChange={handleInputChange} />
@@ -61,6 +75,10 @@ const Products = () => {
                                     </div>
                                     <div className='py-2 text-end'>
                                         <button className='btn btn-primary' type='submit' onClick={handleSubmit}>Submit</button>
+                                    </div>
+
+                                    <div>Route to dahsboard 
+                                        <button onClick={redirectbtn}>Go to dashboard</button>
                                     </div>
                                 </div>
                             </form>

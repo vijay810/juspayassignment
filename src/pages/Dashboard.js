@@ -178,7 +178,7 @@ const Dashboard = () => {
                 <div className='container-fluid px-2'>
                     <div>
                         <p className='mb-0 py-2 tab'>eCommerce</p>
-                        <div className='row mx-0 mb-3'>
+                        <div className='row mx-0'>
                             <div className='col-sm-6 px-0'>
                                 <div className='row mx-0'>
                                     <div className='col-sm-6 p-1'>
