@@ -5,8 +5,10 @@ import { PiSidebarDuotone } from "react-icons/pi";
 import { FaRegStar } from "react-icons/fa";
 import { BsBrightnessHigh } from "react-icons/bs";
 import { GoBell } from "react-icons/go";
-import { RxCountdownTimer } from "react-icons/rx";
 import { CiSearch } from "react-icons/ci";
+import { FiCommand } from "react-icons/fi";
+import { GiBackwardTime } from "react-icons/gi"
+
 const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
     const location = useLocation();
 
@@ -52,7 +54,7 @@ const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
                             </div>
                             <input type="search" className="search-input" placeholder="Search" />
                             <div className="right-inside">
-                                <img src="../assets/images/searchtext.png" alt="icon" />
+                                <FiCommand size={12} /><span>/</span>
                             </div>
                         </div>
                     </div>
@@ -60,7 +62,7 @@ const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
                     <div className='notification d-flex gap align-items-center' >
                         {/* <img src="../assets/images/brightness.png" alt="toggle theme" /> */}
                         < span className='pointer' onClick={toggleTheme}>  <BsBrightnessHigh size={18} /></span>
-                        <RxCountdownTimer size={18} />
+                        <GiBackwardTime size={22} />
                         < GoBell size={18} />
                     </div>
                     
@@ -78,11 +80,11 @@ const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
                 <div className="custom-search">
                     <div className="input-wrapper">
                         <div className="left-inside">
-                            <img src="../assets/images/search.png" alt="icon" />
+                            <CiSearch />
                         </div>
                         <input type="search" className="search-input" placeholder="Search" />
                         <div className="right-inside">
-                            <img src="../assets/images/searchtext.png" alt="icon" />
+                            <FiCommand size={12} /><span>/</span>
                         </div>
                     </div>
                 </div>

@@ -38,13 +38,13 @@
 .left-inside {
   left: 6px;
   top: 11px;
-  filter: brightness(0.5);
+  filter: opacity(0.5);
 }
 
 .right-inside {
   right: 6px;
   top: 11px;
-  filter: brightness(0.5);
+  filter: opacity(0.5);
 }
 
 .left-inside img,
