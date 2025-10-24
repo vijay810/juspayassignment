@@ -37,13 +37,13 @@
 
 .left-inside {
   left: 6px;
-  top: 13px;
+  top: 11px;
   filter: brightness(0.5);
 }
 
 .right-inside {
   right: 6px;
-  top: 13px;
+  top: 11px;
   filter: brightness(0.5);
 }
 
@@ -54,14 +54,17 @@
   filter: brightness(0.5);
 }
 
-.search-input:focus + .right-inside,
+/* .search-input:focus + .right-inside,
 .search-input:focus + .left-inside {
+  opacity: 0 !important;
+} */
+/* ✅ Hide both icons when input is focused */
+.input-wrapper:focus-within .left-inside,
+.input-wrapper:focus-within .right-inside {
   opacity: 0;
-  visibility: hidden;
+  transition: opacity 0.2s ease;
 }
-.left-inside:focus-within img {
-  display: none;
-}
+
 
 .search-input:focus {
   width: 100%;

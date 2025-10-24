@@ -6,7 +6,7 @@ import { FaRegStar } from "react-icons/fa";
 import { BsBrightnessHigh } from "react-icons/bs";
 import { GoBell } from "react-icons/go";
 import { RxCountdownTimer } from "react-icons/rx";
-
+import { CiSearch } from "react-icons/ci";
 const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
     const location = useLocation();
 
@@ -48,7 +48,7 @@ const Header = ({ toggleLeft, toggleRight, toggleTheme }) => {
                     <div className="custom-search d-none d-sm-block">
                         <div className="input-wrapper">
                             <div className="left-inside">
-                                <img src="../assets/images/search.png" alt="icon" />
+                                <CiSearch />
                             </div>
                             <input type="search" className="search-input" placeholder="Search" />
                             <div className="right-inside">
