@@ -29,7 +29,7 @@
   width: 100%;
   padding: 3px 8px 3px 5px;
 }
-.search:focus-within img {
+.search:focus-within img, .search:focus-within .topbar-logo svg {
   display: none;
 }
 img {
@@ -43,6 +43,12 @@ img {
   width: 16px;
   height: 16px;
   pointer-events: none;
+}
+.topbar-logo svg{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+
 }
 .user-profile,
 .date-table {

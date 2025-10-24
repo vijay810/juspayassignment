@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../style/Orderlist.css'
+import { CiSearch } from "react-icons/ci";
 const OrderList = () => {
   const [loader, setLoader] = useState('true')
 
@@ -34,7 +35,10 @@ const OrderList = () => {
                 </div>
                 <div className="search">
                   <input type="search" placeholder="Search..." />
-                  <img className='topbar-logo' src="../assets/images/orderlist/search.png" alt="search icon" />
+                <div className='topbar-logo'>
+                  <CiSearch />
+                </div>
+                  {/* <img className='topbar-logo' src="../assets/images/orderlist/search.png" alt="search icon" /> */}
                 </div>
               </div>
             </div>
