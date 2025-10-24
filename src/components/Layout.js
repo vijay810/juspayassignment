@@ -1,18 +1,19 @@
+// layout.js
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
 import '../style/Layout.css';
 import { RxCross1 } from "react-icons/rx";
+
 const LayoutPage = ({ children }) => {
     const [showLeft, setShowLeft] = useState(true);
     const [showRight, setShowRight] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
-    const [theme, setTheme] = useState('light'); // 👈 Theme state
+    const [theme, setTheme] = useState('light');
 
     const toggleTheme = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
+        setTheme(theme === 'light' ? 'dark' : 'light');
     };
 
     useEffect(() => {
@@ -33,16 +34,27 @@ const LayoutPage = ({ children }) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    // NEW: Function to close sidebar after navigation
+    const handleSidebarClose = () => {
+        if (isMobile) setShowLeft(false);
+    };
+
     return (
         <div className={`layout-wrapper ${theme}-theme d-flex flex-column vh-100`}>
             <div className="d-flex flex-grow-1">
+
                 {(showLeft || isMobile) && (
                     <div className={`sidebar-left border-end p-2 ${showLeft ? 'open' : ''}`}>
                         {isMobile && (
-                            <p className="sidebar-close-btn pe-2" onClick={() => setShowLeft(false)}>< RxCross1 size={15} /></p>
-                            
+                            <p
+                                className="sidebar-close-btn pe-2"
+                                onClick={() => setShowLeft(false)}
+                            >
+                                <RxCross1 size={15} />
+                            </p>
                         )}
-                        <LeftSidebar />
+                        {/* Pass the function as a prop */}
+                        <LeftSidebar onLinkClick={handleSidebarClose} />
                     </div>
                 )}
 
@@ -50,7 +62,7 @@ const LayoutPage = ({ children }) => {
                     <Header
                         toggleLeft={() => setShowLeft(!showLeft)}
                         toggleRight={() => setShowRight(!showRight)}
-                        toggleTheme={toggleTheme} // 👈 Pass to Header
+                        toggleTheme={toggleTheme}
                     />
                     <div>{children}</div>
                 </div>
@@ -58,7 +70,12 @@ const LayoutPage = ({ children }) => {
                 {(showRight || isMobile) && (
                     <div className={`sidebar-right border-start p-2 ${showRight ? 'open' : ''}`}>
                         {isMobile && (
-                            <p className="sidebar-close-btn pe-2" onClick={() => setShowRight(false)}>< RxCross1 size={15} /></p>
+                            <p
+                                className="sidebar-close-btn pe-2"
+                                onClick={() => setShowRight(false)}
+                            >
+                                <RxCross1 size={15} />
+                            </p>
                         )}
                         <RightSidebar />
                     </div>

@@ -1,8 +1,9 @@
+// leftsidebar.js
 import React, { useState } from 'react';
 import '../style/Leftsidebar.css';
 import { Link } from "react-router-dom";
 
-const LeftSidebar = () => {
+const LeftSidebar = ({ onLinkClick }) => {
     const [openIndex, setOpenIndex] = useState(null);
     const [openPagesIndex, setOpenPagesIndex] = useState(null);
 
@@ -126,6 +127,7 @@ const LeftSidebar = () => {
                 </ul>
             </div>
 
+            {/* Dashboard Links */}
             <div className='menu-links'>
                 <div className='side-menu'>
                     <div className='left-bar'></div>
@@ -146,7 +148,13 @@ const LeftSidebar = () => {
                             <ul className={`sub-menu ${openIndex === index ? 'open' : ''}`}>
                                 {item.sub.map((subItem, subIndex) => (
                                     <li key={subIndex}>
-                                        <Link to={subItem.path} onClick={() => setOpenIndex(null)}>
+                                        <Link
+                                            to={subItem.path}
+                                            onClick={() => {
+                                                setOpenIndex(null);
+                                                if (onLinkClick) onLinkClick(); //  Close sidebar
+                                            }}
+                                        >
                                             {subItem.name}
                                         </Link>
                                     </li>
@@ -157,6 +165,7 @@ const LeftSidebar = () => {
                 </div>
             </div>
 
+            {/* Pages Links */}
             <div className='menu-links'>
                 <div className='side-menu'>
                     <div className='left-bar'></div>
@@ -177,7 +186,13 @@ const LeftSidebar = () => {
                             <ul className={`sub-menu ${openPagesIndex === index ? 'open' : ''}`}>
                                 {item.sub.map((subItem, subIndex) => (
                                     <li key={subIndex}>
-                                        <Link to={subItem.path} onClick={() => setOpenPagesIndex(null)}>
+                                        <Link
+                                            to={subItem.path}
+                                            onClick={() => {
+                                                setOpenPagesIndex(null);
+                                                if (onLinkClick) onLinkClick(); // Close sidebar
+                                            }}
+                                        >
                                             {subItem.name}
                                         </Link>
                                     </li>
